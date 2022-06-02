@@ -4,13 +4,13 @@ session_start();
 class CalcAmount {
 
 
-	public function getAmount() {
+	public function getAmount($amount) {
 
-		if(empty($_SESSION['amounts'])){
+		if(empty($_SESSION['amount'])){
 			$_SESSION['count'] = 0;
 		}
 
-		$_SESSION['amount'][$_SESSION['count']] = $_POST['amount'];
+		$_SESSION['amount'][$_SESSION['count']] = $amount;
 		$_SESSION['count'] += 1;
 	}
 }
