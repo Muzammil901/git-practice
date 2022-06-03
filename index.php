@@ -4,6 +4,7 @@
 	<title>Count App</title>
 </head>
 <body>
+
 	<?php session_start();
 	 	include(dirname(__FILE__) . '/classes/calcAmount.php');
 		include(dirname(__FILE__) . '/classes/unsetSessions.php');
@@ -17,6 +18,7 @@
 			<input type="submit" name="unset" value="Clear">
 		</form>
 	</div>
+
 	<?php
 		$getAmount = new CalcAmount();
 		$unsetSession = new UnsetSessions();
@@ -29,7 +31,7 @@
 			}
 			$totalAmount->calcTotal();
 		}
-
+		
 		if(isset($_POST['unset'])){
 			$unsetSession->unsetSession();
 		}
